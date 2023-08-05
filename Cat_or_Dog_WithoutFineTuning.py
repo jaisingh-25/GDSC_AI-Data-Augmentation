@@ -10,13 +10,9 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 train_augmentation=ImageDataGenerator(rescale=1./255, rotation_range=40,
                                       width_shift_range=0.2, height_shift_range=0.2, 
                                       zoom_range=0.2, horizontal_flip=True)
-train_generator=train_augmentation.flow_from_directory('C:/Users/jaisi/Documents/Jai/Programs/College/Pre-Trained CNN/dataset/Train',
-                                               target_size=(128,128), batch_size=20,
-                                               class_mode='binary')
+train_generator=train_augmentation.flow_from_directory('.../dataset/Train', target_size=(128,128), batch_size=20, class_mode='binary')
 validation_augmentation=ImageDataGenerator(rescale=1./255)
-validation_generator=validation_augmentation.flow_from_directory('C:/Users/jaisi/Documents/Jai/Programs/College/Pre-Trained CNN/dataset/Test',
-                                               target_size=(128,128), batch_size=20,
-                                               class_mode='binary')
+validation_generator=validation_augmentation.flow_from_directory('.../dataset/Test', target_size=(128,128), batch_size=20, class_mode='binary')
 conv_base=VGG16(input_shape=(128,128,3), include_top=False, weights='imagenet')
 
 for layer in conv_base.layers:
