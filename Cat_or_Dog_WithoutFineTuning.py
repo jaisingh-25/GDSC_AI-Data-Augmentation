@@ -1,5 +1,3 @@
-# Created by Jai_RA2212701010011
-
 import tensorflow
 from tensorflow.keras import layers
 from tensorflow.keras import Model
