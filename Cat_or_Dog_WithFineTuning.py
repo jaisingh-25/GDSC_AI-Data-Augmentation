@@ -14,7 +14,6 @@ model.add(conv_base)
 model.add(layers.Flatten())
 model.add(layers.Dense(units= 256, activation='relu'))
 model.add(layers.Dense(units=1, activation='sigmoid'))
-
 conv_base.trainable = True
 set_trainable=False
 for layer in conv_base.layers:
