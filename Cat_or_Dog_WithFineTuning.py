@@ -27,7 +27,6 @@ model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accurac
 
 history=model.fit(train_generator, steps_per_epoch=10, epochs=10, verbose=1,
           validation_data=validation_generator)
-
 import matplotlib.pyplot as plt
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
