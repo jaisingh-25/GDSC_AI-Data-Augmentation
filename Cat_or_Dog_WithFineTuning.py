@@ -23,7 +23,6 @@ for layer in conv_base.layers:
         layer.trainable=True
     else:
         layer.trainable=False
-
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
 
 history=model.fit(train_generator, steps_per_epoch=10, epochs=10, verbose=1,
