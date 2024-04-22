@@ -17,7 +17,6 @@ model.add(layers.Flatten())
 model.add(layers.Dense(units= 256, activation='relu'))
 model.add(layers.Dense(units=1, activation='sigmoid'))
 model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['accuracy'])
-
 history=model.fit(train_generator, steps_per_epoch=10, epochs=10, verbose=1,
           validation_data=validation_generator)
 
