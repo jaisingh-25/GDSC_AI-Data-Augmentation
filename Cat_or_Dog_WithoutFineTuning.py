@@ -11,7 +11,6 @@ validation_generator=validation_augmentation.flow_from_directory('.../dataset/Te
 conv_base=VGG16(input_shape=(128,128,3), include_top=False, weights='imagenet')
 for layer in conv_base.layers:
     layer.trainable=False
-    
 model = Sequential()
 model.add(conv_base)
 model.add(layers.Flatten())
