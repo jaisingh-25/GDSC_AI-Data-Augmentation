@@ -3,7 +3,6 @@ from tensorflow.keras import layers
 from tensorflow.keras import Model
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.applications.vgg16 import VGG16
-
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 train_augmentation=ImageDataGenerator(rescale=1./255, rotation_range=40,
                                       width_shift_range=0.2, height_shift_range=0.2, 
