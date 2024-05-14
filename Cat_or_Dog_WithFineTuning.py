@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
 plt.title('Model Accuracy')
-plt.ylabel('accuracy')
+plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.show()
 plt.plot(history.history['loss'])
