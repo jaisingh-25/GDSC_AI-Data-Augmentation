@@ -29,7 +29,7 @@ history=model.fit(train_generator, steps_per_epoch=10, epochs=10, verbose=1,
 import matplotlib.pyplot as plt
 plt.plot(history.history['accuracy'])
 plt.plot(history.history['val_accuracy'])
-plt.title('model accuracy')
+plt.title('Model Accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.show()
